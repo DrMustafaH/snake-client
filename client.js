@@ -10,7 +10,16 @@ const connect = function () {
     setTimeout(() => console.log("you ded cuz you idled"), MAX_IDLE_TIMEOUT)
   conn.on('connect', () => {
     conn.write('Name: ABC');
+    // setInterval(() => conn.write('Move: up'), 2000);
+    // setTimeout(() => conn.write('Move: right'), 2000);
+    // setTimeout(() => conn.write('Move: down'), 3000);
+    // setTimeout(() => conn.write('Move: down'), 4000);
+    // conn.write('Move: right');
+    // conn.write('Move: down');
+    // conn.write('Move: left');
   });
+  // conn.on('connect', () => {
+  // });
   conn.setEncoding('utf8');
   return conn;
 }
