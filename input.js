@@ -16,8 +16,6 @@ const handleUserInput = function () {
   });
 }
 
-setupInput()
-
 module.exports = {
   setupInput
 }
