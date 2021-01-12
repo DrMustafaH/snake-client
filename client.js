@@ -6,7 +6,11 @@ const connect = function () {
     host: '192.168.0.101',
     port: 50541
   });
-  setTimeout(() => console.log("you ded cuz you idled"), MAX_IDLE_TIMEOUT)
+  conn.on("connect", () => console.log("Successfully connected to game server")),
+    setTimeout(() => console.log("you ded cuz you idled"), MAX_IDLE_TIMEOUT)
+  conn.on('connect', () => {
+    conn.write('Name: ABC');
+  });
   conn.setEncoding('utf8');
   return conn;
 }
